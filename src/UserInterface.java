@@ -1,9 +1,8 @@
-/*
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class UserInterface {
-    public static int menu(){
+    public static int menu() {
         int selection;
         Scanner input = new Scanner(System.in);
         System.out.println("+------------------+");
@@ -18,8 +17,12 @@ public class UserInterface {
         System.out.println("3) Display all products where stock is < 5");
         System.out.println("4) Display all products out of stock");
         System.out.println("5) Exit");
+        System.out.println("The menu does basically nothing atm its just \"working\"");
 
-
+        selection = input.nextInt();
+        return selection;
+    }
+    public static void printMenu() throws InterruptedException {
         int userChoice;
         userChoice = menu();
         int timeOut = 0; // seconds
@@ -92,10 +95,5 @@ public class UserInterface {
             default:
                 // The user input an unexpected choice.
         }
-
-
-        selection = input.nextInt();
-        return selection;
     }
 }
-*/

@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Shop {
-    private String shopName;
-    private String shopAdress;
-    private ArrayList<Product> products = new ArrayList<>();
+    private static String shopName;
+    private String shopAddress;
+    private static ArrayList<Product> products = new ArrayList<>();
 
 
     public String getShopName() {
@@ -15,11 +15,11 @@ public class Shop {
     }
 
     public String getShopAdress() {
-        return shopAdress;
+        return shopAddress;
     }
 
     public void setShopAdress(String shopAdress) {
-        this.shopAdress = shopAdress;
+        this.shopAddress = shopAdress;
     }
 
     public ArrayList<Product> getProducts() {
@@ -39,7 +39,8 @@ public class Shop {
         products.add(product);
     }
 
-    public void printProducts() {
+    public static void printProducts() {
+        System.out.println("\u001B[33m"+"\nShop: "+"\u001B[0m"+"\u001B[34m"+shopName+"\u001B[0m");
         System.out.println(products);
     }
 }
